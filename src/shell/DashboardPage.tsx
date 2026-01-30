@@ -117,13 +117,7 @@ const STATUS_COLORS: Record<string, string> = {
   complete: styles.lsComplete,
 };
 
-const STATUS_LABELS: Record<string, string> = {
-  process: 'En Proceso',
-  hold: 'QC Hold',
-  filling: 'Llenado',
-  packing: 'Empaque',
-  complete: 'Completo',
-};
+
 
 export function DashboardPage() {
   const totalKgToday = WEEKLY_PRODUCTION[WEEKLY_PRODUCTION.length - 1].kg;
@@ -201,7 +195,7 @@ export function DashboardPage() {
                 <YAxis tick={{ fontSize: 10, fill: '#8494a7' }} axisLine={false} tickLine={false} width={40} />
                 <Tooltip
                   contentStyle={{ fontSize: 11, borderRadius: 4, border: '1px solid #ccd2da' }}
-                  formatter={(v: number) => [`${v.toLocaleString()} kg`, 'Producción']}
+                  formatter={(v: number | undefined) => [`${(v ?? 0).toLocaleString()} kg`, 'Producción']}
                 />
                 <Bar dataKey="kg" fill="#2a5298" radius={[3, 3, 0, 0]} />
               </BarChart>
@@ -244,7 +238,7 @@ export function DashboardPage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#e0e4ea" vertical={false} />
                 <XAxis dataKey="w" tick={{ fontSize: 9, fill: '#8494a7' }} axisLine={false} tickLine={false} />
                 <YAxis tick={{ fontSize: 9, fill: '#8494a7' }} axisLine={false} tickLine={false} width={35} tickFormatter={v => `${v / 1000}k`} />
-                <Tooltip contentStyle={{ fontSize: 11, borderRadius: 4, border: '1px solid #ccd2da' }} formatter={(v: number) => [`$${v.toLocaleString()}`, '']} />
+                <Tooltip contentStyle={{ fontSize: 11, borderRadius: 4, border: '1px solid #ccd2da' }} formatter={(v: number | undefined) => [`$${(v ?? 0).toLocaleString()}`, '']} />
                 <Area type="monotone" dataKey="revenue" stroke="#16a34a" fill="#e6f5ec" strokeWidth={2} name="Ingresos" />
                 <Area type="monotone" dataKey="cost" stroke="#dc2626" fill="#fde8ea" strokeWidth={1.5} name="Costos" />
               </AreaChart>

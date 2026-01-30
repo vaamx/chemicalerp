@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { Session, User, Permission } from '../shared/types';
+import type { Session, Permission } from '../shared/types';
 import { MOCK_USERS } from '../shared/mock/users';
 
 interface AuthState {
