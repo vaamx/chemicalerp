@@ -1,0 +1,122 @@
+/* ============================================================
+   PLUS MAKERS — Chemical Manufacturing System
+
+   LIGHT INDUSTRIAL CONTROL ROOM
+   White panels, light gray background, dark navy chrome.
+   Same density and structure — just light mode.
+   ============================================================ */
+
+:root {
+  /* --- Backgrounds --- */
+  --bg-app: #e8ecf0;
+  --bg-panel: #ffffff;
+  --bg-panel-alt: #f7f8fa;
+  --bg-panel-header: #f0f2f5;
+  --bg-input: #f5f6f8;
+  --bg-hover: #edf0f4;
+  --bg-selected: #e0e8f4;
+
+  /* --- Chrome (dark navy top bar & sidebar) --- */
+  --chrome-bg: #1b2a4a;
+  --chrome-bg-light: #243660;
+  --chrome-hover: #2d4272;
+  --chrome-active: #355090;
+  --chrome-text: #8899b8;
+  --chrome-text-bright: #ffffff;
+  --chrome-border: #2a3d65;
+
+  /* --- Borders --- */
+  --border-light: #e0e4ea;
+  --border-mid: #ccd2da;
+  --border-strong: #b0b8c8;
+  --border-accent: #3b6bc4;
+
+  /* --- Brand --- */
+  --brand-primary: #2a5298;
+  --brand-light: #3b6bc4;
+  --brand-bg: #e8eef7;
+
+  /* --- Text --- */
+  --text-primary: #1a2236;
+  --text-secondary: #4a5568;
+  --text-muted: #8494a7;
+  --text-accent: #2a5298;
+  --text-inverse: #ffffff;
+
+  /* --- Status (ISA-101) --- */
+  --status-normal: #16843a;
+  --status-normal-bg: #e6f5ec;
+  --status-normal-border: #a3ddb8;
+
+  --status-caution: #a07d0a;
+  --status-caution-bg: #fdf6e3;
+  --status-caution-border: #e8d49a;
+
+  --status-abnormal: #c41e2a;
+  --status-abnormal-bg: #fde8ea;
+  --status-abnormal-border: #e8a3a8;
+
+  --status-info: #2a5298;
+  --status-info-bg: #e8eef7;
+  --status-info-border: #a3b8db;
+
+  --status-warning: #b85c0a;
+  --status-warning-bg: #fdf0e3;
+  --status-warning-border: #e8c49a;
+
+  --status-hold: #6a3ab0;
+  --status-hold-bg: #f0e8f7;
+  --status-hold-border: #b8a3db;
+
+  /* --- Buttons --- */
+  --btn-primary-bg: #2a5298;
+  --btn-primary-hover: #1e3f78;
+  --btn-secondary-bg: #f0f2f5;
+  --btn-secondary-hover: #e0e4ea;
+  --btn-secondary-border: #ccd2da;
+
+  /* --- Spacing (dense) --- */
+  --sp-1: 2px;
+  --sp-2: 4px;
+  --sp-3: 6px;
+  --sp-4: 8px;
+  --sp-5: 10px;
+  --sp-6: 12px;
+  --sp-8: 16px;
+  --sp-10: 20px;
+  --sp-12: 24px;
+  --sp-16: 32px;
+
+  /* --- Typography --- */
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace;
+  --font-sans: 'Inter', 'Segoe UI', -apple-system, sans-serif;
+
+  --fs-2xs: 0.5625rem;
+  --fs-xs: 0.625rem;
+  --fs-sm: 0.6875rem;
+  --fs-base: 0.75rem;
+  --fs-md: 0.8125rem;
+  --fs-lg: 0.9375rem;
+  --fs-xl: 1.0625rem;
+  --fs-2xl: 1.25rem;
+  --fs-3xl: 1.5rem;
+  --fs-jumbo: 2rem;
+
+  /* --- Radius --- */
+  --r-xs: 2px;
+  --r-sm: 3px;
+  --r-md: 4px;
+  --r-lg: 6px;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-panel: 0 1px 3px rgba(0,0,0,0.07);
+
+  /* --- Layout --- */
+  --topbar-h: 44px;
+  --subtopbar-h: 22px;
+  --alert-bar-h: 32px;
+  --sidebar-w: 200px;
+  --bottombar-h: 26px;
+}

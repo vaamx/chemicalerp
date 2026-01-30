@@ -1,0 +1,293 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: var(--bg-app);
+}
+
+/* ===== Left brand panel (dark navy) ===== */
+.brandPanel {
+  width: 420px;
+  flex-shrink: 0;
+  background: var(--chrome-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px 24px;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid var(--chrome-border);
+}
+
+.brandPanel::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 107, 196, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.brandContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--chrome-border);
+}
+
+.brandInfo { display: flex; flex-direction: column; gap: 6px; }
+
+.brandName {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.brandDesc {
+  font-size: var(--fs-sm);
+  color: var(--chrome-text);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.brandDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--chrome-border);
+}
+
+.brandDetail { display: flex; flex-direction: column; gap: 2px; }
+
+.detailLabel {
+  font-size: var(--fs-2xs);
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.detailValue {
+  font-size: var(--fs-sm);
+  color: var(--chrome-text);
+}
+
+.brandFooter {
+  font-size: var(--fs-2xs);
+  color: rgba(255,255,255,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Right form panel (light) ===== */
+.formPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-panel);
+  padding: 40px;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.formHeader { display: flex; flex-direction: column; gap: 4px; }
+
+.formTitle {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.formSubtitle {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field { display: flex; flex-direction: column; gap: 4px; }
+
+.label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  height: 38px;
+  padding: 0 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-mid);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-base);
+  color: var(--text-primary);
+  transition: border-color 80ms, box-shadow 80ms;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--brand-light);
+  box-shadow: 0 0 0 2px rgba(59, 107, 196, 0.15);
+}
+
+.input::placeholder { color: var(--text-muted); }
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-sm);
+  color: var(--status-abnormal);
+  padding: 8px 10px;
+  background: var(--status-abnormal-bg);
+  border: 1px solid var(--status-abnormal-border);
+  border-radius: var(--r-sm);
+}
+
+.errorIcon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--status-abnormal);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.submit {
+  height: 38px;
+  background: var(--btn-primary-bg);
+  color: white;
+  border-radius: var(--r-sm);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  transition: background 80ms;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
+}
+
+.submit:hover:not(:disabled) { background: var(--btn-primary-hover); }
+.submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.quickAccess { display: flex; flex-direction: column; gap: 12px; }
+
+.quickHeader { display: flex; align-items: center; gap: 10px; }
+
+.quickLine { flex: 1; height: 1px; background: var(--border-light); }
+
+.quickLabel {
+  font-size: var(--fs-2xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.quickGrid { display: flex; flex-direction: column; gap: 1px; }
+
+.quickBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px;
+  border-radius: var(--r-sm);
+  transition: background 80ms;
+  text-align: left;
+}
+
+.quickBtn:hover { background: var(--bg-hover); }
+
+.quickDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.quickInfo { display: flex; align-items: baseline; gap: 8px; }
+
+.quickName {
+  font-size: var(--fs-sm);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.quickRole {
+  font-size: var(--fs-2xs);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ════════════════════════════════════
+   RESPONSIVE — MOBILE
+   ════════════════════════════════════ */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .brandPanel {
+    width: 100%;
+    padding: 24px 20px 16px;
+    flex-shrink: 0;
+    min-height: auto;
+  }
+  .brandPanel::before { display: none; }
+  .brandContent { gap: 16px; }
+  .logo { width: 52px; height: 52px; }
+  .brandName { font-size: 20px; }
+  .brandDetails { display: none; }
+  .brandFooter { display: none; }
+  .formPanel {
+    padding: 24px 20px;
+    flex: 1;
+  }
+  .formContainer {
+    max-width: 100%;
+    gap: 20px;
+  }
+  .input { height: 42px; font-size: 16px; /* prevent iOS zoom */ }
+  .submit { height: 42px; font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+  .brandPanel { padding: 16px 16px 12px; }
+  .logo { width: 44px; height: 44px; }
+  .brandName { font-size: 18px; }
+  .brandDesc { font-size: 10px; }
+  .formPanel { padding: 16px; }
+  .formTitle { font-size: 18px; }
+  .quickInfo { flex-direction: column; align-items: flex-start; gap: 0; }
+}
